@@ -58,8 +58,18 @@ for-each pair drugs [
 	script: unspaced ["gs -sDEVICE=pngmono -o " root "-%02d.png -r600 " pdf]
 	; now convert to png using ghostscript
 	call script
-	script: unspaced ["gs sDEVICE=eps2write -sPAPERSIZE=a4 -o " root "-%02d.eps " pdf]
-	; now convert to eps using ghostscript
+	
+	; script: unspaced ["gs sDEVICE=eps2write -sPAPERSIZE=a4 -o " root "-%02d.eps " pdf]
+	; split into separate pdfs eg. SA1234-01.pdf
+	call unspaced ["pdfseparate " pdf space root "-%02d.pdf"]
+	; now to convert each of the pdfs into eps
+	n: 1
+	forever [
+		if exists? filename: to file! unspaced [root "-" next form 100 + n %.pdf][
+			call unspaced ["pdftops -eps " filename]		
+		] else [break]
+		n: me + 1
+	]
 	call script
 ]
 
