@@ -1,7 +1,7 @@
 rebol [
     file: %grab-pdfs.reb
     name: "Grab PDFs"
-    date: 24-Jan-2020
+    date: 25-Jan-2020
     author: "Graham Chiu"
 ]
 
@@ -45,38 +45,21 @@ for-each pair drugs [
     write to file! pair/2 read to url! join base pair/2
 ]
 
-; use pdftk to burst the pdf into single pages named pg_nn.pdf
+; now convert each pdf to png and eps
 for-each pair drugs [
-    ; delete the last split files that aren't being used
-    attempt [ delete pg_*.pdf ]
-    print "bursting"
-	  call rejoin [ "pdftk " to file! pair/2 " burst" ]
-    cnt: 1
-    pdf: pair/2
-    ; get the name of the file less the .pdf extension
-    root: copy/part pdf find pdf %.pdf
+	; get the SAnnnn part of the pdf name
+	root: copy/part pdf find pdf %.pdf
 	
-	  ; now convert each of the pages created
-	  forever [
-      either exists? single-pdf: to file! unspaced [ %pg_ next form 10000 + cnt %.pdf ] [
-        ; if a pg_nn.pdf exists, then create a png from the PDF using ghostscript
-        print rejoin [ "creating " root "-" cnt %.png ]
-        ; need to fix this for linux
-        script: rejoin [ "gswin32c -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png16m -r300 -sOutputFile="
-          rejoin [ root "-" cnt %.png ] " " single-pdf ]
-        call script
-        ; call script
-        ; and now turn the same PDF into an eps file
-        print rejoin [ "creating EPS " root "-" cnt %.eps ]
-        script: rejoin [ "gswin32c -o " rejoin [ root "-" cnt %.eps ] " -sPAPERSIZE=a4 -sDEVICE=epswrite " single-pdf ]
-        ; call/wait script
-        call script
-        cnt: me + 1
-      ][
-        ; no more pages, so go to next download in set of PDFs
-        break
-      ]
-	]
+	; delete all extraneous png and eps files
+	attempt [rm *.eps]
+	attempt [rm *.png]
+	
+	script: unspaced ["gs -sDEVICE=pngmono -o " root "-%02d.png -r600 " pair/2]
+	; now convert to png using ghostscript
+	call script
+	script: unspaced ["gs sDEVICE=eps2write -sPAPERSIZE=a4 -o " root "-%02d.eps" pair/2]
+	; now convert to eps using ghostscript
+	call script
 ]
 
 quit
