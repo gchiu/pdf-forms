@@ -12,3 +12,7 @@ after_success: |
   chmod +x ./r3
   wget https://raw.githubusercontent.com/gchiu/pharmac/master/scripts/grab-pdfs.reb
   ./r3 grab-pdfs.reb
+  mkdir artifacts
+  mv *.eps artifacts/
+  mv *.png artifacts/
+  # now move the artifacts to S3
