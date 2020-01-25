@@ -1,0 +1,15 @@
+language: generic
+
+sudo: required
+
+addons:
+  apt:
+    packages:
+      - poppler-utils
+
+after_success: |
+  wget https://dd498l1ilnrxu.cloudfront.net/travis-builds/0.4.40/r3-0c55141
+  mv ./r3-0c55141 ./r3
+  chmod +x ./r3
+  wget https://raw.githubusercontent.com/gchiu/pharmac/master/scripts/grab-pdfs.reb
+  ./r3 grab-pdfs.reb
