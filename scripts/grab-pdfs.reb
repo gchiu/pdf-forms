@@ -39,6 +39,7 @@ parse data [
 ; drugs [["Benzbromarone" "SA1537.pdf"] ["Teriparatide" "SA1139.pdf"] ["Adalimumab" "SA1847.pdf"] ["Etanercept" "SA1812.pdf"]]
 
 ; download each pdf and save it to the local filesystem 
+print "downloading pdfs"
 for-each pair drugs [
     probe pair/1
     print unspaced [base pair/2]
@@ -46,6 +47,7 @@ for-each pair drugs [
 ]
 
 ; now convert each pdf to png and eps
+print "converting pdfs to png and eps"
 for-each pair drugs [
 	; get the SAnnnn part of the pdf name
 	pdf: pair/2
@@ -72,5 +74,7 @@ for-each pair drugs [
 	]
 	call script
 ]
+
+print "Finished job"
 
 quit
