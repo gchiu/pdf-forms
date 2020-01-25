@@ -48,6 +48,7 @@ for-each pair drugs [
 ; now convert each pdf to png and eps
 for-each pair drugs [
 	; get the SAnnnn part of the pdf name
+	pdf: pair/2
 	root: copy/part pdf find pdf %.pdf
 	
 	; delete all extraneous png and eps files
