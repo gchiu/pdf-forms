@@ -55,10 +55,10 @@ for-each pair drugs [
 	attempt [rm *.eps]
 	attempt [rm *.png]
 	
-	script: unspaced ["gs -sDEVICE=pngmono -o " root "-%02d.png -r600 " pair/2]
+	script: unspaced ["gs -sDEVICE=pngmono -o " root "-%02d.png -r600 " pdf]
 	; now convert to png using ghostscript
 	call script
-	script: unspaced ["gs sDEVICE=eps2write -sPAPERSIZE=a4 -o " root "-%02d.eps" pair/2]
+	script: unspaced ["gs sDEVICE=eps2write -sPAPERSIZE=a4 -o " root "-%02d.eps " pdf]
 	; now convert to eps using ghostscript
 	call script
 ]
