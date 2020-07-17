@@ -2,6 +2,7 @@ language: generic
 
 env:
     global:
+        - AWS_S3_BUCKET_NAME: "www.r3gui.com"
         # travis encrypt AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
         #
         - secure: "YtK9EPCSRsOapATczbD3/EOk5Rlo3KJ3pl8YB1CW0YH1IukVlgj7X/Q/soKdoxp6o4iSDPqOj3GGAavxpLyH/YGZ+fVP+Z0r+RtUcSoYxqKHUEwWQSWFiFGjCB5OCTN4sJf+SmZzxYd04Z1FGpViCR6iJQR3o67AW3P5mT2mSInyz+0S+WiarjKc9hwtaVwFYvkUAGo4xsIvq0ZuSsNKe4tJF4Rmbgpe3ahquQYuwwTmZER06HX+KL/TVtRpitfIpVhuTe/v+jUJCk80MQulu2c0oxsxlp4PxJs35SAFmS+ATVBQB++kzESwLkcWiHrexueIG+C4vAUC3UJ7IeumNlnrqtctdSdH1DWhEaFYgBzJA7ThaIypWYqRDR2N2oH+wsmTvJmoi97ujNZUn37/NKur5XDAnqXytFRrplKsChJMeg6udf3ZHq7w0C7vOykEP60jvMsFF5Shy+KyoeShsaWI7r5WILbPoMeHSGnNVfZ9woEiHUOxC4fnbq6Ni9fi/ln5ir+Y0eTbb7/ePFzeirqzvr/QZrpybWHor0gppXqUzuceCGU2tY5AhAlxwT4/fQoMfC/5O9immcvxbVKn5HbGmsaTKoGNtuOXc+aWTv2pf3p3qUq2nbm3gAimwlrMuj5axOmJyW7UPd56c4JBiW4mY7MF/HrEtXSH299itaY="
@@ -9,8 +10,6 @@ env:
         # travis encrypt AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
         #
         - secure: "kAg9j/JmCI7HTmqT7WRCG1q+eWOvnnzS7DFEMaiayi8jfbJWAVCSU3IIWYYzOW0Jtx917QYbsF2IorZKciCh5i3KNNnBQqWjkSI1xPDtpfMIE36+fq1CEar2Sg5C+nm8Vz6ktPM1zYXp1b587KrsrMUQC8RC4QUEptVi0gidqT0yu4kROzKWtS+h+ZYbt4++Jd1SAHBbnQQDRND0VoczvSb9ZtJ2FiRcrTWtYjN60cFOKU95njqxCQyKCOhWeulru07I0X9yKywcYAXBI25ro6k2xVfa/gpP/nKcKc+t6F6vAHckpXaFc9ezP5WkqT2O79NV5PBNGmFb8xNNo+3ylZZ2GGxBAMEc2CS1DJlTqosJgFNts7nDpogCK+D9+OTgwlPtN8QQRTSmDyQt/xiK+UNF2HSXGHwXwK/iUl7qlMRBJncL0wtW6G7Jdjdw10rmVmVRPryEGh47wvbJNFXXo04q2X33CmfPxevirOJTCyJgXo/AaDySrDFYB9B1HpFQ9DXtKMyq3Lv0CWkEKLzoan/w2q0eeYwqfly2YAz8fwuEg9AZTaqrR/JJDyeexb1L4LsTrRMlHXadrkvFNjPo8quvYx2sekrK1MxyMvIu32UFczMS81+lFTe7EArxgyX+1FwsavZC6c+p442QDCAWlyhNc+DwlVcA3x6Y0DBCkLs="
-        #
-        - AWS_S3_BUCKET_NAME: "www.r3gui.com"
        
 addons:
   apt:
