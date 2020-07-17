@@ -26,11 +26,15 @@ after_success:
   - ./r3 grab-pdfs.reb
   - ls
   - git add *.pdf
+  - git add *.eps
+  - git add *.ps
+  - git commit
   # - mkdir artifacts
+  - mkdir images
   - mv *.pdf images/
   - mv *.eps images/
   - mv *.png images/
-  - ls images
+  - ls images/
   - git add images
   # now move the images to S3
   
