@@ -25,10 +25,6 @@ after_success:
   - wget https://raw.githubusercontent.com/gchiu/pharmac/master/scripts/grab-pdfs.reb
   - ./r3 grab-pdfs.reb
   - ls
-  - git add *.pdf
-  - git add *.eps
-  - git add *.png
-  - git commit
   # - mkdir artifacts
   - mkdir images
   - mv *.pdf images/
