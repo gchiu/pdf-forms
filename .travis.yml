@@ -38,6 +38,6 @@ deploy:
    access_key_id: $AWS_ACCESS_KEY_ID
    secret_access_key: $AWS_SECRET_ACCESS_KEY
    bucket: $AWS_S3_BUCKET_NAME
-   # deploy.skip_cleanup: true
+   skip_cleanup: true
    upload_dir: images
 
