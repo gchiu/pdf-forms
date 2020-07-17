@@ -25,12 +25,13 @@ after_success:
   - wget https://raw.githubusercontent.com/gchiu/pharmac/master/scripts/grab-pdfs.reb
   - ./r3 grab-pdfs.reb
   - ls
+  - git add *.pdf
   # - mkdir artifacts
   - mv *.pdf images/
   - mv *.eps images/
   - mv *.png images/
-  - ls images/
-  - git add images/*
+  - ls images
+  - git add images
   # now move the images to S3
   
 deploy:
