@@ -33,7 +33,6 @@ after_success:
   - zip pdfs images/
   - mv pdfs.zip images/
   - ls images/
-  - git add images
   # now move the images to S3
   
 deploy:
