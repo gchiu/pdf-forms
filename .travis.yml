@@ -29,6 +29,7 @@ after_success:
   - mv *.pdf artifacts/
   - mv *.eps artifacts/
   - mv *.png artifacts/
+  - ls artifacts/
   # now move the artifacts to S3
   
 deploy:
@@ -37,6 +38,6 @@ deploy:
    access_key_id: $AWS_ACCESS_KEY_ID
    secret_access_key: $AWS_SECRET_ACCESS_KEY
    bucket: $AWS_S3_BUCKET_NAME
-   deploy.skip_cleanup: true
+   # deploy.skip_cleanup: true
    upload_dir: artifacts
 
