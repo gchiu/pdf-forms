@@ -29,7 +29,7 @@ after_success: |
   mv *.png artifacts/
   # now move the artifacts to S3
   
-  deploy:
+deploy:
    provider: s3
    # these are set up in the global env
    access_key_id: $AWS_ACCESS_KEY_ID
