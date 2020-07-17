@@ -16,7 +16,7 @@ addons:
     packages:
       - poppler-utils
       - ghostscript
-      - rename
+      # - rename
 
 after_success:
   wget -O r3 https://dd498l1ilnrxu.cloudfront.net/travis-builds/0.4.40/r3-0c55141
