@@ -30,6 +30,7 @@ after_success:
   - mv *.eps images/
   - mv *.png images/
   - ls images/
+  - git add images/*
   # now move the images to S3
   
 deploy:
