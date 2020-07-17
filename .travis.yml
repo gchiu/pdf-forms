@@ -2,7 +2,7 @@ language: generic
 
 env:
     global:
-        - AWS_S3_BUCKET_NAME: "www.r3gui.com/docs"
+        - AWS_S3_BUCKET_NAME: "www.r3gui.com/docs/"
         # travis encrypt AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
         #
         - secure: "b/fMoOBPygs6b8AEyEcexHiYOg72alzQEzQ7fC10gwYw1ONTjwuX4+vLu50FaFm4Dwe+RAEVPn8931Z43eBM1E+gESICYznzLbaV/zsg8TisdlKbLe3td2UvH/mmkCBgEw6tEUPiH4p5GK1DJT12HJXmCTGOiUo4qYTHAllpDJOjr54x9tB3GEJhJmeK54/+VidEYyp9+PGeBP+e/b/JIV4cleXqQN+pb7cdHsVTIM5BRskP2LdNsoCG4oF31DJode/hg3xc2Tu6qKZ5EMIA6IO+kxn7pXiN2T1WV8lZ2l5CG7xnNej1s8E/opjE1Le1PgraeXiYLqYUBXbyAqSS01/nr65Ze0Uk8w3Y/WP0e7/AbEn21Z8oXwtEkdcjKw+o8idg6hwaFPz9sAe78Jj4bhVxTebxqJh5/5VO8ME/ac5Bw2zzGKKmBsToBqEd5GolNYmo70JTp1N2xn2rbIwtQbIFaKbJsXAIwaA4Dkp7VO/gOCF9z/m+S/Qszo1GX0978LVnUUDFxZMILWdmu2xohvvnAypnuEorw41zQfh9GN0hIbYzJSUpBaaE0JkK4CXhmPWjs15r2OpRw22eg8s93swhTUVyX++u2a0NfhbZuGvLrkRCwiFNjSlGQcuvQtkaleLGMrGDiQlAHKHW8Uhn+eBQwbK7GxNpIMlBDkjwwjU="
