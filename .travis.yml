@@ -26,6 +26,7 @@ after_success:
   - ./r3 grab-pdfs.reb
   - ls
   - mkdir artifacts
+  - mv *.pdf artifacts/
   - mv *.eps artifacts/
   - mv *.png artifacts/
   # now move the artifacts to S3
