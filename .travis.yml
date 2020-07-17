@@ -27,7 +27,7 @@ after_success:
   - ls
   - git add *.pdf
   - git add *.eps
-  - git add *.ps
+  - git add *.png
   - git commit
   # - mkdir artifacts
   - mkdir images
