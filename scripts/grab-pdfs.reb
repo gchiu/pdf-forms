@@ -12,7 +12,7 @@ pdfs: https://www.pharmac.govt.nz/wwwtrs/SAForms.php
 base: https://www.pharmac.govt.nz/latest/
 
 ; these are the drugs we use and are interested in.  Check their page (pdfs) to see what other drugs are supported
-wanted: ["Adalimumab" "Etanercept" "Teriparatide" "Aclasta" "Benzbromarone"]
+wanted: ["Adalimumab" "Etanercept" "Teriparatide" "Zoledronic acid" "Benzbromarone"]
 
 ; read the page and turn into text for parsing out the download links
 data: to text! read pdfs 
