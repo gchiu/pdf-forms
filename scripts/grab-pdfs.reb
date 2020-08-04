@@ -14,6 +14,13 @@ base: https://www.pharmac.govt.nz/latest/
 ; these are the drugs we use and are interested in.  Check their page (pdfs) to see what other drugs are supported
 wanted: ["Adalimumab" "Etanercept" "Teriparatide" "Zoledronic acid inj 0.05 mg per ml, 100 ml" "Benzbromarone"]
 
+; as of August 2020 the pages are
+; Adalimumab SA1950
+; Etanercept SA1949
+; Teriparatide SA1139
+; Zolendronic Acid SA1780
+; Benzbromarone SA1537
+
 ; read the page and turn into text for parsing out the download links
 data: to text! read pdfs 
 
