@@ -6,7 +6,7 @@ rebol [
 ]
 
 ; Pharmac puts an index of all the Special authorities on this page
-pdfs: https://www.pharmac.govt.nz/wwwtrs/SAForms.php
+pdfs: https://schedule.pharmac.govt.nz/SAForms.php
 
 ; and this is their download directory
 base: https://www.pharmac.govt.nz/latest/
