@@ -9,7 +9,7 @@ rebol [
 pdfs: https://schedule.pharmac.govt.nz/SAForms.php
 
 ; and this is their download directory
-base: https://pharmac.govt.nz/latest/
+base: to url! unspaced [https://pharmac.govt.nz/ now/year "/" next form (10 + now/month) "01/"]
 
 ; these are the drugs we use and are interested in.  Check their page (pdfs) to see what other drugs are supported
 wanted: ["Adalimumab" "Etanercept" "Teriparatide" "Zoledronic acid inj 0.05 mg per ml, 100 ml" "Benzbromarone" "Tocilizumab"]
