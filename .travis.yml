@@ -20,7 +20,7 @@ addons:
 
 after_success:
   - wget https://metaeducation.s3.amazonaws.com/assets/r3-linux-62d4407
-  - mv ./r3-0c55141 ./r3
+  - mv ./r3-linux-62d4407 ./r3
   - chmod +x ./r3
   - wget https://raw.githubusercontent.com/gchiu/pharmac/master/scripts/grab-pdfs.reb
   - ./r3 grab-pdfs.reb
